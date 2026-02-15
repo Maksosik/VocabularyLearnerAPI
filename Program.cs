@@ -15,7 +15,7 @@ builder.Services.AddDbContext<VocabularyContext>(options =>
 // 3. Налаштовуємо CORS
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(policy =>
+    options.AddPolicy("AllowAll", policy => // Даємо політиці назву
     {
         policy.AllowAnyOrigin()
               .AllowAnyHeader()
@@ -24,6 +24,8 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
+app.UseCors("AllowAll");// Явно вказуємо назву
 
 // --- початок блоку ініціалізації бд, якщо цього не було ще ---
 using (var scope = app.Services.CreateScope())
@@ -71,4 +73,5 @@ using (var scope = app.Services.CreateScope())
 app.UseCors();
 app.MapControllers();
 
+app.Urls.Add("http://0.0.0.0:8080");
 app.Run();
