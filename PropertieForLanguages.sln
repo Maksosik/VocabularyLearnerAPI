@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertieForLanguages", "PropertieForLanguages\PropertieForLanguages.csproj", "{EFCC4B64-FF89-49AC-A783-051163EB5F33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertieForLanguages.DataContext.Sqlite", "PropertieForLanguages.DataContext.Sqlite\PropertieForLanguages.DataContext.Sqlite.csproj", "{CF20A6D8-DAAA-4F7E-B8EE-A59B617C8C14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFCC4B64-FF89-49AC-A783-051163EB5F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFCC4B64-FF89-49AC-A783-051163EB5F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFCC4B64-FF89-49AC-A783-051163EB5F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFCC4B64-FF89-49AC-A783-051163EB5F33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF20A6D8-DAAA-4F7E-B8EE-A59B617C8C14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF20A6D8-DAAA-4F7E-B8EE-A59B617C8C14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF20A6D8-DAAA-4F7E-B8EE-A59B617C8C14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF20A6D8-DAAA-4F7E-B8EE-A59B617C8C14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE3CB869-EB95-45EA-A2A8-E303E3276732}
+	EndGlobalSection
+EndGlobal
