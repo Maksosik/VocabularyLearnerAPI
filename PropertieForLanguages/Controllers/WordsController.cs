@@ -23,7 +23,7 @@ public class WordsController : ControllerBase
         var random = new Random();
 
         // 1. Оскільки ми знаємо діапазон GroupId (1-3000), обираємо випадковий номер
-        int randomGroupId = random.Next(1, 3001);
+        int randomGroupId = random.Next(1, 3868);
 
         // 2. Фільтруємо базу так, щоб дістати лише два рядки: мову "З" та мову "НА"
         // Це працює дуже швидко завдяки індексу на GroupId
