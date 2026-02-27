@@ -20,10 +20,11 @@ public class WordsController : ControllerBase
     [HttpGet("random")]
     public async Task<ActionResult<IEnumerable<Word>>> GetRandomPair(string fromLang = "en", string toLang = "uk")
     {
-        var random = new Random();
+        int maxGroupId = await _db.Words.MaxAsync(w => (int?)w.GroupId) ?? 0;
+        if (maxGroupId == 0) return NotFound("База даних порожня");
 
-        // 1. Оскільки ми знаємо діапазон GroupId (1-3000), обираємо випадковий номер
-        int randomGroupId = random.Next(1, 3001);
+        var random = new Random();
+        int randomGroupId = random.Next(1, maxGroupId + 1);
 
         // 2. Фільтруємо базу так, щоб дістати лише два рядки: мову "З" та мову "НА"
         // Це працює дуже швидко завдяки індексу на GroupId
