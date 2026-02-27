@@ -21,7 +21,6 @@ public class WordsController : ControllerBase
     public async Task<ActionResult<IEnumerable<Word>>> GetRandomPair(string fromLang = "en", string toLang = "uk")
     {
         int maxGroupId = await _db.Words.MaxAsync(w => (int?)w.GroupId) ?? 0;
-
         if (maxGroupId == 0) return NotFound("База даних порожня");
 
         var random = new Random();
